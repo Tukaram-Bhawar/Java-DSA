@@ -3,6 +3,7 @@ import java.util.HashSet;
 public class intersection {
 
     public static void getintersection(int arr1[],int arr2[]){
+        @SuppressWarnings("rawtypes")
         HashSet<Integer> set=new HashSet();
         int count =0;
         for(int i=0;i<arr1.length;i++){
