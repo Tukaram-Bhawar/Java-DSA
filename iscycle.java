@@ -21,7 +21,7 @@ public class iscycle {
         graph[0].add(new edge(0, 2));
         graph[1].add(new edge(1, 0));
         graph[2].add(new edge(2, 3));
-        graph[3].add(new edge(3, 0));
+        // graph[3].add(new edge(3, 0));
     
     }
 
@@ -49,7 +49,21 @@ public class iscycle {
         ArrayList<edge> graph[]=new ArrayList[v];
 
         createGraph(graph);
-        System.out.println(isCyclecheck(graph, new boolean[v], 0, new boolean[v]));
+
+        boolean visit[]=new boolean[v];
+        boolean rec[]=new boolean[v];
+        for(int i=0;i<v;i++){
+            if(!visit[i]){
+                boolean iscysle=isCyclecheck(graph, visit, 0, rec);
+                if(iscysle){
+                    System.out.println(iscysle);
+                    break;
+                }else{
+                    System.out.println(iscysle);
+                    break;
+                }
+            }
+        }
     }
     
 }
