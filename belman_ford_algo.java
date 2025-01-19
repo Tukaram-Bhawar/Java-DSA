@@ -15,15 +15,7 @@ public class belman_ford_algo {
             }
         }
 
-        for (int j = 0; j < E; ++j) {
-            int u = edges[j][0];
-            int v = edges[j][1];
-            int weight = edges[j][2];
-            if (dist[u] != Integer.MAX_VALUE && dist[u] + weight < dist[v]) {
-                System.out.println("Graph contains negative weight cycle");
-                return;
-            }
-        }
+        
 
         printArr(dist, V);
     }
